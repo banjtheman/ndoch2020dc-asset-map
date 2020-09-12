@@ -44,11 +44,7 @@ cast their votes in 2020 elections.
 
 ### How does your technology help solve this problem?
 
-Yes, currently the information can be found on the ([DC Board of
-Elections
-website](https://www.dcboe.org/Voters/Where-to-Vote/Mail-Ballot-Drop-Sites)),
-but that information is in table form and doesn't easily allow voters
-understand the dropbox locations in relation to their current location.
+Enables users to find their closest ballot dropbox location + public transportation option to get to that closest location. 
 
 ### What was the timeline for this project?
 
