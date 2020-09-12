@@ -44,7 +44,7 @@ cast their votes in 2020 elections.
 
 ### How does your technology help solve this problem?
 
-Enables users to find their closest ballot dropbox location + public transportation option to get to that closest location. 
+Enables users to find their closest ballot dropbox location + public transportation options to get to that closest ballot dropbox location. 
 
 ### What was the timeline for this project?
 
