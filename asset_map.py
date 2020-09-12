@@ -10,9 +10,7 @@ import altair as alt
 
 
 
-def load_csv(csv_path):
-    df = pd.read_csv(csv_path)
-    return df
+
 
 
 
@@ -46,7 +44,7 @@ def get_assets():
     return 0
 
 
-def load_map(assets):
+def load_map():
     #TODO
 
     st.title("Civic Day of Hacking Asset Map")
@@ -55,14 +53,13 @@ def load_map(assets):
 
     st.header("This is our asset map")
 
-    map_lat = "Lat"
-    map_long = "Long_"
+    map_lat = "MAR_LATITUDE"
+    map_long = "MAR_LONGITUDE"
 
 
-    st.write(assets)
 
 
-    df = pd.read_csv("data/covid.csv", dtype={"Lat": float, "Long_": float}).dropna()
+    df = pd.read_csv("data/full_ballot_data.csv", dtype={map_lat: float, map_long: float})
     # st.dataframe(df)
     st.write("")
     st.write("")
@@ -70,7 +67,7 @@ def load_map(assets):
     first_lat = df[map_lat].mean()
     first_long = df[map_long].mean()
 
-    m = folium.Map(location=[first_lat, first_long], zoom_start=5)
+    m = folium.Map(location=[first_lat, first_long], zoom_start=16)
 
     # now place a marker for each row in df
     df.apply(
@@ -87,8 +84,7 @@ def main():
     #query_params = st.experimental_get_query_params()
     #key = query_params["key"][0]
 
-    assets = load_csv("data/covid.csv")
-    load_map(assets)
+    load_map()
 
 
 
