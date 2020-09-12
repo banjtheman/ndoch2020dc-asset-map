@@ -49,4 +49,3 @@ Users: Any DC voter who has access to the interent via web or mobile device.
 ### What would you say are wins and challenges from the project?
 
 
-### What are the key deliverables for the project?
