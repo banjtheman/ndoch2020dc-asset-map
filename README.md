@@ -77,7 +77,8 @@ device.
 ### Data sources
 
 * [Mail Ballot Dropboxes - 
-   DC.gov Open Data](https://opendata.dc.gov/datasets/mail-ballot-drop-boxes)
+  DC.gov Open Data](https://opendata.dc.gov/datasets/mail-ballot-drop-boxes)
 * [Metrorail stations - 
   DC.gov Open Data](https://opendata.dc.gov/datasets/54018b7f06b943f2af278bbe415df1de_52)
-* [Capital Bikeshare data](https://gbfs.capitalbikeshare.com/gbfs/gbfs.json)
+* [Capital Bikeshare
+  data](https://gbfs.capitalbikeshare.com/gbfs/en/station_information.json)
