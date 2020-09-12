@@ -33,7 +33,7 @@ drop locations have specific dates and times associated with them.
 In addition to easing findability of dropbox location, we also want to assist voters with finding public transportation options to these dropbox locations. Transportation often serves as one of the biggest barriers to voting in the United States. 
 
 #### The DC BAllot Dropbox app assits voters in DC with:
-- identifying where their closest mail-in-ballot dropbox is located
+- identifying where their closest ballot dropbox is located
 - the app will display the cooresponding date and time those dropbox locations are available 
 - provide closest metro, bus and capital bikeshare locations to these dropbox locations
 
