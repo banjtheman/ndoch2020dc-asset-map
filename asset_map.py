@@ -10,9 +10,9 @@ import altair as alt
 
 
 
-@st.cache
 def load_csv(csv_path):
-    return pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path)
+    return df
 
 
 
@@ -53,23 +53,32 @@ def load_map(assets):
 
     sidebar_options()
 
-
     st.header("This is our asset map")
 
-    m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
-    tooltip = "Liberty Bell"
-    folium.Marker(
-        [39.949610, -75.150282], popup="Liberty Bell", tooltip=tooltip
-    ).add_to(m)
+    map_lat = "Lat"
+    map_long = "Long_"
 
+
+    st.write(assets)
+
+
+    df = pd.read_csv("data/covid.csv", dtype={"Lat": float, "Long_": float}).dropna()
+    # st.dataframe(df)
+    st.write("")
+    st.write("")
+
+    first_lat = df[map_lat].mean()
+    first_long = df[map_long].mean()
+
+    m = folium.Map(location=[first_lat, first_long], zoom_start=5)
 
     # now place a marker for each row in df
-    # df.apply(
-    #     lambda row: mark_map(row, m, map_lat, map_long, df.columns), axis=1
-    #         )
+    df.apply(
+            lambda row: mark_map(row, m, map_lat, map_long, df.columns), axis=1
+            )
 
+    # might be able to hard code it here
 
-    # call to render Folium map in Streamlit
     folium_static(m)
 
 
@@ -78,7 +87,7 @@ def main():
     #query_params = st.experimental_get_query_params()
     #key = query_params["key"][0]
 
-    assets = get_assets()
+    assets = load_csv("data/covid.csv")
     load_map(assets)
 
 
