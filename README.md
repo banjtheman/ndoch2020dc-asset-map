@@ -5,7 +5,7 @@
 
 ### What is the name of your project?
 
-Washington, DC Mail-in-Ballot Drop Box Locations - shortname: DC
+Washington, DC Mail-in-Ballot Drop Box Locations - shortname: DC Ballot Dropbox
 BAllot Dropbox Finder
 
 ### Who is the primary contact for the project?
@@ -30,13 +30,12 @@ can be securely dropped off at various locations around DC, but those
 do not readily correspond to specific polling places, and often those
 drop locations have specific dates and times associated with them.
 
-DC BAllot Dropbox assits votes in DC in identify where the closest
-ballot drop-off locations are based on their residential address. The
-app's main feature is surfacing those locations in relation to a
-voter's current location. Additinally, the app will display the
-cooresponding date and time those dropbox locations are available. 
-Where we can, we'll also provide helpful tips for filling in
-mail-in-ballots.
+In addition to easing findability of dropbox location, we also want to assist voters with finding public transportation options to these dropbox locations. Transportation often serves as of the the biggest barriers to voting in the United States. 
+
+The DC BAllot Dropbox app assits voters in DC with:
+- identifying where their closest mail-in-ballot dropbox is located
+- the app will display the cooresponding date and time those dropbox locations are available 
+- provide closest metro, bus and capiltal bikeshare locations to these dropbox locations
 
 ### Who is affected by the issue?
 
@@ -68,7 +67,7 @@ Hacking
 ### Who are your users and how do they use the technology?
 
 Users: Any DC voter who has access to the interent via web or mobile
-device.
+device that is also using mail-in-ballot option to cast their vote in the 2020 elections. 
 
 ### What is your outreach strategy to users and what adoption tips do you have?
 
