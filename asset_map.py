@@ -23,7 +23,14 @@ def mark_map(row, m, map_lat, map_long, cols):
     tooltip_string = ""
 
     for col in cols:
-        tooltip_string += "<b>" + str(col) + ": </b>" + str(row[col]) + "<br>"
+        
+        try:
+            tooltip_string += "<b>" + str(col) + ": </b>" + str(row[col]) + "<br>"
+        except Exception as error:
+            print(error)
+            continue
+
+
 
     folium.Marker(
         [curr_lat, curr_long], popup=tooltip_string, tooltip=tooltip_string
@@ -73,6 +80,15 @@ def load_map():
     df.apply(
             lambda row: mark_map(row, m, map_lat, map_long, df.columns), axis=1
             )
+
+
+    metro_df = pd.read_csv("data/Metro_Stations_in_DC.csv", dtype={"Y": float, "X": float}).dropna()
+    # now place a marker for each row in df
+    st.write(metro_df)
+    df.apply(
+            lambda row: mark_map(row, m, "Y", "X", metro_df.columns), axis=1
+            )
+
 
     # might be able to hard code it here
 
